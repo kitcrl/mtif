@@ -30,7 +30,7 @@
 #define HIBYTE(w)          ((w&0xFF00)>>8)
 #endif
 
-#define CODEX                    0xFFFF
+#define MTIF                    0xFFFF
 
 #define SYSTEM_STATUS            0xFFFF
 #define SYSTEM_VERSION           0xFFFE
