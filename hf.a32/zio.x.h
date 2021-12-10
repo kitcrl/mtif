@@ -18,8 +18,8 @@
 /*        25 02 2019   Shin Seunghyeok  Draft                                */
 /*                                                                           */
 /*****************************************************************************/
-#ifndef __CODE_X_H_F2DBDC40_6196_4E67_A689_D31A9310BEC0__
-#define __CODE_X_H_F2DBDC40_6196_4E67_A689_D31A9310BEC0__
+#ifndef __ZIO_X_H_F2DBDC40_6196_4E67_A689_D31A9310BEC0__
+#define __ZIO_X_H_F2DBDC40_6196_4E67_A689_D31A9310BEC0__
 
 #if defined LINUX
 #define MAKEWORD(a,b)      ((a&0x00FF)|((b&0x00FF)<<8))
@@ -245,16 +245,16 @@ enum
 #define  E_WRITEING                            0xE000100B
 #define  E_WRITE_COMPLETE                      0xE000100A
 #define  E_WRITE_FAIL                          0xE000100F
-#define  E_IO_BUFFER_PTR                       0xE00010B0
+#define  E_IO_INPUT_OK                         0xE0001010
 #define  E_IO_CLOSEING                         0xE000FDFB
 #define  E_IO_CLOSE_COMPLETE                   0xE000FDFA
 #define  E_IO_CLOSE_FAIL                       0xE000FDFF
 #define  E_IO_OPENING                          0xE000FD0B
 #define  E_IO_OPEN_COMPLETE                    0xE000FD0A
 #define  E_IO_OPEN_FAIL                        0xE000FD0F
-#define  E_IO_REMOTE_CONNECTING                0xE000FD1B
-#define  E_IO_REMOTE_CONNECT_COMPLETE          0xE000FD1A
-#define  E_IO_REMOTE_CONNECT_FAIL              0xE000FD1F
+#define  E_IO_REMOTE_CONNECTING                0xE000FDAB
+#define  E_IO_REMOTE_CONNECT_COMPLETE          0xE000FDAA
+#define  E_IO_REMOTE_CONNECT_FAIL              0xE000FDAF
 #define  E_CLIENT_CONNECTING                   0xE000FDCB
 #define  E_CLIENT_CONNECT_COMPLETE             0xE000FDCA
 #define  E_CLIENT_CONNECT_FAIL                 0xE000FDCF
@@ -296,14 +296,6 @@ enum
 #define  E_HIGHT_VECTOR_SIZE                   0xECA40004
 #define  E_HIGHT_CTR_NULL                      0xECA40005
 #define  E_HIGHT_CTR_SIZE                      0xECA40006
-
-
-
-
-
-
-
-
 
 
 
