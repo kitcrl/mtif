@@ -21,7 +21,7 @@
 #ifndef __ZIO_X_H_F2DBDC40_6196_4E67_A689_D31A9310BEC0__
 #define __ZIO_X_H_F2DBDC40_6196_4E67_A689_D31A9310BEC0__
 
-#if defined LINUX
+#if __LINUX__
 #define MAKEWORD(a,b)      ((a&0x00FF)|((b&0x00FF)<<8))
 #define MAKELONG(a,b)      ((a&0x0000FFFF)|((b&0x0000ffff)<<16))
 #define LOWORD(l)           (l&0x0000FFFF)
