@@ -105,7 +105,7 @@ typedef TCHAR            tchar;
 #define GB                  0x40000000
 
 #define ms                  0x400
-#define SEMAPHORE_COUNTER   0x00002000
+#define SEMAPHORE_COUNTER   0x00010000
 
 #if __WIN32__
 #pragma comment(lib, "ws2_32.lib")
@@ -268,12 +268,12 @@ pthread_attr_destroy(&tattr);                                           \
 //#endif
 
 
-#define xSLEEP(a)          \
-{                               \
-struct timeval v = {0};         \
-v.tv_sec = a/1000000;           \
-v.tv_usec = a%1000000;          \
-select(1,0,0,0,&v);             \
+#define xSLEEP(a)                      \
+{                                      \
+struct timeval v = {0};                \
+v.tv_sec = a/1000000;                  \
+v.tv_sec = a - v.tv_sec*1000000;       \
+select(0,0,0,0,&v);                    \
 }
 
 #if 0
@@ -322,6 +322,10 @@ xREG;
 #if __WIN32__
 #pragma pack()
 #endif
+
+
+
+#define __zero()     0
 
 #endif
 
